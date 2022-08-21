@@ -164,7 +164,7 @@ if __name__ == "__main__":
     matches = matcher_object.beginMatch()
 
     #write matches to csv file
-    header = ["User", "Matches with", "Score"]
+    header = ["User", "Matches with", "Score %"]
 
     with open('matches.csv', 'w', encoding='UTF8') as f:
         writer = csv.writer(f)
@@ -174,3 +174,5 @@ if __name__ == "__main__":
 
         for match in matches:
             writer.writerow([match[0], match[1], match[2]])
+
+    print("Matching complete - See output CSV file")
